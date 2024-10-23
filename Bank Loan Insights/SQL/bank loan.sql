@@ -33,30 +33,32 @@ select * from bank_loan_data;
 DROP TABLE IF EXISTS bank_loan_data;
 
 
-COPY bank_loan_data (id, address_state, application_type, emp_length, emp_title, grade, home_ownership, issue_date, last_credit_pull_date, last_payment_date, loan_status, next_payment_date, member_id, purpose, sub_grade, term, verification_status, annual_income, dti, installment, int_rate, loan_amount, total_acc, total_payment)
-FROM 'C:\Users\PARTH\Desktop\FINAL LAPTOP\DESTOP\PowerBI-Projects-main\Bank Loan Insights\data' -- Ensure your file name is included
-DELIMITER ',' 
+# Use any one query for load excel file in sql 
 
-LOAD DATA INFILE 'C:/Users/PARTH/Desktop/FINAL LAPTOP/DESTOP/PowerBI-Projects-main/Bank Loan Insights/data/yourfile.csv'
+/* COPY bank_loan_data (id, address_state, application_type, emp_length, emp_title, grade, home_ownership, issue_date, last_credit_pull_date, last_payment_date, loan_status, next_payment_date, member_id, purpose, sub_grade, term, verification_status, annual_income, dti, installment, int_rate, loan_amount, total_acc, total_payment)
+FROM 'C:\Users\PARTH\Desktop\FINAL LAPTOP\DESTOP\PowerBI-Projects-main\Bank Loan Insights\data' -- Ensure your file name is included
+DELIMITER ',' */
+
+/* LOAD DATA INFILE 'C:/Users/PARTH/Desktop/FINAL LAPTOP/DESTOP/PowerBI-Projects-main/Bank Loan Insights/data/yourfile.csv'
 INTO TABLE bank_loan_data
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS -- This skips the header in the CSV
-(id, address_state, application_type, emp_length, emp_title, grade, home_ownership, issue_date, last_credit_pull_date, last_payment_date, loan_status, next_payment_date, member_id, purpose, sub_grade, term, verification_status, annual_income, dti, installment, int_rate, loan_amount, total_acc, total_payment);
+(id, address_state, application_type, emp_length, emp_title, grade, home_ownership, issue_date, last_credit_pull_date, last_payment_date, loan_status, next_payment_date, member_id, purpose, sub_grade, term, verification_status, annual_income, dti, installment, int_rate, loan_amount, total_acc, total_payment); */
 
-LOAD DATA INFILE 'C:/Users/PARTH/Desktop/FINAL LAPTOP/DESTOP/PowerBI-Projects-main/Bank Loan Insights/data/yourfile.csv'
+/* LOAD DATA INFILE 'C:/Users/PARTH/Desktop/FINAL LAPTOP/DESTOP/PowerBI-Projects-main/Bank Loan Insights/data/yourfile.csv'
 INTO TABLE bank_loan_data
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
-IGNORE 1 ROWS;
+IGNORE 1 ROWS;*/
 
-LOAD DATA INFILE 
+/* LOAD DATA INFILE 
 INTO TABLE your_table
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 
-IGNORE 1 LINES;
+IGNORE 1 LINES;*/
 
 
 
